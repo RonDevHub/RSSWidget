@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RSS Feed Embed Widget Demo</title>
+    <link rel="stylesheet" href="rss-widget.css" />
+  </head>
+  <body>
+    <h1>RSS Feed Embed Widget Demo</h1>
+
+    <div id="rss-widget"></div>
+
+    <script src="rss-widget.js"></script>
+    <script>
+      RSSWidget.init({
+        target: "#rss-widget", // CSS selector for the widget container / CSS-Selektor für das Widget-Element
+        title: "GitHub RSS Feed", // Widget title / Widget-Titel
+        feedUrl: "https://github.com/RonDevHub.atom", // RSS/Atom feed URL / RSS/Atom Feed-URL
+        showFavicon: true, // Show favicon in header (true) or hide (false) / Favicon im Header anzeigen (true) oder ausblenden (false)
+        limit: 5, // Maximum number of feed items to display / Maximale Anzahl der Feed-Einträge
+        height: "500px", // Widget height (e.g. "500px" or "100%") / Widget-Höhe (z.B. "500px" oder "100%")
+        width: "400px", // Widget width (e.g. "400px" or "100%") / Widget-Breite (z.B. "400px" oder "100%")
+        scrollbar: false, // Show scrollbar (true) or hide (false) / Scrollbar anzeigen (true) oder ausblenden (false)
+        refreshMinutes: 10, // Refresh interval in minutes / Aktualisierungsintervall in Minuten
+        header: true, // Show header (true) or hide (false) / Header anzeigen (true) oder ausblenden (false)
+        footer: true, // Show footer (true) or hide (false) / Footer anzeigen (true) oder ausblenden (false)
+        lang: "de", // Language for UI texts: "de", "en", "it", "fr", "uk" / Sprache für UI-Texte: "de", "en", "it", "fr", "uk"
+        theme: "light", // Theme: "light", "dark", "green", "blue", "red", "github" / Theme: "light", "dark", "green", "blue", "red", "github"
+      });
+    </script>
+  </body>
+</html>

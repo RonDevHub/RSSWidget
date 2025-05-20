@@ -1,0 +1,231 @@
+/* widget.css */
+
+/* Default Theme (light) */
+:root {
+  --bg: #dfdfdf;
+  --text: #222;
+  --card-bg: #fff;
+  --link: #0066cc;
+  --link-hover: #004999;
+  --border: #ddd;
+}
+
+/* Dark Theme */
+[data-theme="dark"] .rss-widget {
+  --bg: #222;
+  --text: #ddd;
+  --card-bg: #333;
+  --link: #66aaff;
+  --link-hover: #3388cc;
+  --border: #444;
+}
+
+/* Green Theme */
+[data-theme="green"] .rss-widget {
+  --bg: #7ca23d;
+  --text: #ffffff;
+  --card-bg: #8fcf5b;
+  --link: #fff;
+  --link-hover: #eaffc1;
+  --border: #709238;
+}
+
+/* Blue Theme */
+[data-theme="blue"] .rss-widget {
+  --bg: #eaf1fb;
+  --text: #1a355e;
+  --card-bg: #f5faff;
+  --link: #2176c7;
+  --link-hover: #174a7c;
+  --border: #7bb1e6;
+}
+
+/* Red Theme */
+[data-theme="red"] .rss-widget {
+  --bg: #fff0f0;
+  --text: #a61010;
+  --card-bg: #fff6f6;
+  --link: #c72121;
+  --link-hover: #7c1717;
+  --border: #e67b7b;
+}
+
+/* GitHub Theme */
+[data-theme="github"] .rss-widget {
+  --bg: #f6f8fa;
+  --text: #24292f;
+  --card-bg: #ffffff;
+  --link: #0969da;
+  --link-hover: #0a3069;
+  --border: #d0d7de;
+}
+
+.rss-widget {
+  font-family: var(--font-family, Arial, sans-serif);
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius, 8px);
+  box-shadow: var(--shadow, 0 2px 8px rgba(0, 0, 0, 0.1));
+  padding: 1rem;
+  width: 350px; /* Standard-Widget-Breite */
+  height: 500px; /* Standard-Widget-Höhe */
+  min-width: 220px;
+  min-height: 200px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+.rss-widget-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.rss-widget-favicon {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  margin-right: 0.5em;
+  flex-shrink: 0;
+}
+
+.rss-widget-body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+/* Scrollbar ausblendbar für Body */
+.rss-widget-hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+.rss-widget-hide-scrollbar::-webkit-scrollbar {
+  display: none !important; /* Chrome/Safari */
+}
+
+.rss-widget-footer {
+  font-size: 0.95rem;
+  color: var(--text);
+  border-top: 1px solid var(--border);
+  margin-top: 1rem;
+  padding-top: 0.7rem;
+  text-align: right;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+.rss-widget .rss-item {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  transition: background-color 0.3s;
+}
+
+.rss-widget .rss-item a.title {
+  color: var(--link);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.rss-widget .rss-item a.title:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+.rss-widget .rss-item .pub-date {
+  font-size: 0.85rem;
+  color: var(--text);
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.rss-widget .rss-item .description {
+  font-size: 0.9rem;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+.rss-widget .rss-item img {
+  max-width: 100%;
+  border-radius: var(--border-radius);
+  margin-top: 0.5rem;
+}
+
+/* Loader style */
+.rss-widget .loading {
+  font-style: italic;
+  padding: 1rem;
+  text-align: center;
+}
+
+.rss-widget-loader-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  gap: 1.2em;
+}
+
+.rss-widget-loader-svg {
+  width: 48px;
+  height: 48px;
+  animation: rss-widget-loader-pulse 1.2s infinite ease-in-out;
+  display: block;
+}
+
+@keyframes rss-widget-loader-pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.08);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.rss-widget-loader-text {
+  font-size: 1.05em;
+  color: var(--text);
+  opacity: 0.8;
+  margin-top: 0.5em;
+}
+
+/* Error message */
+.rss-widget .error {
+  color: red;
+  padding: 1rem;
+  text-align: center;
+}
+
+.rss-widget-powered-link {
+  color: var(--link);
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+.rss-widget-powered-link:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
