@@ -178,12 +178,6 @@ const RSSWidget = (() => {
         return;
       }
       const items = data.items || [];
-      if (lastFeedIds.size) {
-        const newItems = items.filter((i) => !lastFeedIds.has(i.link));
-        if (newItems.length === 0) {
-          return;
-        }
-      }
       lastFeedIds = new Set(items.map((i) => i.link));
       if (!items.length) {
         container.innerHTML = `<div class="error">${noFeedText}</div>`;
