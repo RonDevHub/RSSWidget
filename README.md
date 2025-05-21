@@ -1,4 +1,6 @@
 # RSS Feed Embed Widget
+![rssfeed local_ (1)](https://github.com/user-attachments/assets/7793e2cf-552d-470a-a02d-65bb9b86427c)
+
 
 A simple, customizable, and themeable RSS/Atom feed widget for your website.  
 Ein einfaches, anpassbares und themefähiges RSS/Atom-Feed-Widget für deine Webseite.
