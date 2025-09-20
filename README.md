@@ -1,4 +1,11 @@
 # RSS Feed Embed Widget
+![GitHub language count](https://mini-badges.rondevhub.de/github/RonDevHub/MastoTimeline/created_at/social/calendarjelly) ![GitHub Repo stars](https://mini-badges.rondevhub.de/github/RonDevHub/MastoTimeline/stars/social/starjelly)  ![GitHub license](https://mini-badges.rondevhub.de/github/RonDevHub/MastoTimeline/license/social/crownjelly/*/c1d82f-black) ![GitHub release (latest by date)](https://mini-badges.rondevhub.de/github/RonDevHub/MastoTimeline/release/social/wandjelly) ![GitHub top language](https://mini-badges.rondevhub.de/github/RonDevHub/MastoTimeline/top_language_count/social/codejelly) ![GitHub language count](https://mini-badges.rondevhub.de/github/RonDevHub/MastoTimeline/commit/social/calendarjelly)
+
+[![Buy me a coffee](https://mini-badges.rondevhub.de/icon/cuptogo/Buy_me_a_Coffee-c1d82f-222/for-the-badge "Buy me a coffee")](https://www.buymeacoffee.com/RonDev)
+[![Buy me a coffee](https://mini-badges.rondevhub.de/icon/cuptogo/ko--fi.com-c1d82f-222/for-the-badge "Buy me a coffee")](https://ko-fi.com/U6U31EV2VS)
+[![Sponsor me](https://mini-badges.rondevhub.de/icon/hearts-red/Sponsor_me/for-the-badge "Sponsor me")](https://github.com/sponsors/RonDevHub)
+[![Pizza Power](https://mini-badges.rondevhub.de/icon/pizzaslice/Buy_me_a_pizza/for-the-badge "Pizza Power")](https://www.paypal.com/paypalme/Depressionist1/4,99)
+
 ![rssfeed local_ (1)](https://github.com/user-attachments/assets/7793e2cf-552d-470a-a02d-65bb9b86427c)
 
 
